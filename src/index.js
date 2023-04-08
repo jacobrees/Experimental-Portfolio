@@ -8,10 +8,6 @@ ScrollTrigger.defaults({
   markers: true,
 });
 
-window.addEventListener("resize", () => {
-    
-})
-
 const triggerElement = document.querySelector(".home-name-container");
 const targetElement = document.querySelector(".name-title");
 
@@ -30,4 +26,4 @@ tl.from(targetElement, {
   y: screen.height / 2,
 });
 
-console.log(targetElement.width, targetElement.height);
+
