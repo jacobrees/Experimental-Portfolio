@@ -42,6 +42,22 @@ scrollDisappear.to(scrollText, {
   x: -100,
 });
 
+const projectsTitle = document.querySelector(".projects-title");
+const projectsContainer = document.querySelector(".projects-container");
+
+const enlargeProjectsTitle = gsap.timeline({
+    scrollTrigger: {
+        trigger: projectsContainer,
+        start: "top center",
+        end: "bottom top",
+        scrub: 1,
+    }
+})
+
+enlargeProjectsTitle.to(projectsTitle, {
+    fontSize: 90,
+})
+
 const lenis = new Lenis();
 
 lenis.on("scroll", (e) => {
