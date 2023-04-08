@@ -6,25 +6,40 @@ import Lenis from "@studio-freight/lenis";
 gsap.registerPlugin(ScrollTrigger);
 
 ScrollTrigger.defaults({
-  markers: false,
+  markers: true,
 });
 
-const triggerElement = document.querySelector(".home-name-container");
-const targetElement = document.querySelector(".name-title");
+const homeContainer = document.querySelector(".home-name-container");
+const nameTitle = document.querySelector(".name-title");
 
-let tl = gsap.timeline({
+const nameToNavbar = gsap.timeline({
   scrollTrigger: {
-    trigger: triggerElement,
-    // trigger element - viewport
+    trigger: homeContainer,
     start: "top center",
     end: "bottom top",
     scrub: 1,
   },
 });
-tl.from(targetElement, {
-  fontSize: 124,
+nameToNavbar.from(nameTitle, {
+  fontSize: 90,
   duration: 1,
   y: screen.height / 2,
+});
+
+const scrollText = document.querySelector(".scroll-text");
+
+const scrollDisappear = gsap.timeline({
+  scrollTrigger: {
+    trigger: homeContainer,
+    start: "top top",
+    end: "center top",
+    scrub: 1,
+  },
+});
+
+scrollDisappear.to(scrollText, {
+  opacity: 0,
+  x: -100,
 });
 
 const lenis = new Lenis();
