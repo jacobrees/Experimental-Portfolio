@@ -38,6 +38,7 @@
     "last 3 iOS versions"
   ],
   "dependencies": {
+    "@studio-freight/lenis": "^1.0.6",
     "gsap": "file:gsap-bonus.tgz"
   }
 }
