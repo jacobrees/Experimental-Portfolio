@@ -36,5 +36,8 @@
     "> 1%",
     "iOS 7",
     "last 3 iOS versions"
-  ]
+  ],
+  "dependencies": {
+    "gsap": "file:gsap-bonus.tgz"
+  }
 }
