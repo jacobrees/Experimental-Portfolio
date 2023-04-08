@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 ScrollTrigger.defaults({
-  markers: true,
+  markers: false,
 });
 
 const triggerElement = document.querySelector(".home-name-container");
